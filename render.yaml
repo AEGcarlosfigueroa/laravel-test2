@@ -2,7 +2,7 @@ services:
   - name: laravel-app
     type: web
     runtime: docker
-    repo: https://github.com/AEGcarlosfigueroa/laravel-test
+    repo: https://github.com/AEGcarlosfigueroa/laravel-test2
     plan: free
     envVars:
       - key: APP_ENV
