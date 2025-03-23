@@ -14,12 +14,12 @@ services:
       - key: DB_CONNECTION
         value: pgsql
       - key: DB_HOST
-        fromDatabase: postgres
+        fromDatabase: ep-still-base-abthmx6a-pooler.eu-west-2.aws.neon.tech
       - key: DB_PORT
         value: 5432
       - key: DB_DATABASE
-        fromDatabase: postgres
+        fromDatabase: laravelTest
       - key: DB_USERNAME
-        fromDatabase: postgres
+        fromDatabase: laravelTest_owner
       - key: DB_PASSWORD
-        fromDatabase: postgres
+        fromDatabase: npg_6cWuHIGTz2AX
