@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Ingredient;
 use Illuminate\Http\Request;
 
-class PotionController extends Controller
+class IngredientController extends Controller
 {
     /**
      * Display a listing of the resource.

@@ -10,7 +10,7 @@ class Ingredient extends Model
 {
     use HasFactory;
 
-    protected $table = 'ingredients';
+    protected $table = 'public.Ingredients';
     protected $primaryKey = 'ingredient_id';
     public $timestamps = false;
 
@@ -18,6 +18,6 @@ class Ingredient extends Model
 
     public function potions()
     {
-        return $this->belongsToMany(Potion::class, 'potions_ingredients', 'ingredient_id', 'potion_id')->withPivot('qty');
+        return $this->belongsToMany(Potion::class, 'public.Potions_Ingredients', 'ingredient_id', 'potion_id')->withPivot('qty');
     }
 }

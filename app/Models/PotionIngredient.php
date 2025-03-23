@@ -9,7 +9,7 @@ class PotionIngredient extends Model
 {
     use HasFactory;
 
-    protected $table = 'potions_ingredients';
+    protected $table = 'public.Potions_Ingredients';
     public $timestamps = false;
 
     protected $fillable = ['potion_id','ingredient_id','qty'];

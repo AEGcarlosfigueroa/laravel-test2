@@ -9,7 +9,7 @@ class Potion extends Model
 {
     use HasFactory;
 
-    protected $table = 'potions';
+    protected $table = 'public.Potions';
     protected $primaryKey = 'potion_id';
     public $timestamps = false;
 
@@ -17,11 +17,11 @@ class Potion extends Model
 
     public function ingredients()
     {
-        return $this->belongsToMany(Ingredient::class, 'potions_ingredients', 'potion_id', 'ingredient_id')->withPivot('qty');
+        return $this->belongsToMany(Ingredient::class, 'Potions_Ingredients', 'potion_id', 'ingredient_id')->withPivot('qty');
     }
 
     public function wizards()
     {
-        return $this->blongsToMany(Wizard::class, 'wizards_potions', 'potion_id', 'wizard_id')->withPivot('date_brewed');
+        return $this->belongsToMany(Wizard::class, 'Wizards_Potions', 'potion_id', 'wizard_id')->withPivot('date_brewed');
     }
 }

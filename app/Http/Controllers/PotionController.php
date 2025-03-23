@@ -12,7 +12,7 @@ class PotionController extends Controller
      */
     public function index()
     {
-        return Potion::with("ingredients", "wizards")->get();
+        return Potion::with('Ingredients', 'Wizards')->get();
     }
 
     /**
@@ -35,7 +35,7 @@ class PotionController extends Controller
      */
     public function show(string $id)
     {
-        return Potion::with('ingredients', 'wizards')->findOrFail($id);
+        return Potion::with('Ingredients', 'Wizards')->findOrFail($id);
     }
 
     /**
