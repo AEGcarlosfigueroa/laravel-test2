@@ -23,7 +23,7 @@ WORKDIR /var/www/html
 RUN composer install --no-dev --optimize-autoloader
 
 # Configura permisos
-RUN sudo chown -R www-data:www-data /var/www/html \
+RUN chown -R www-data:www-data /var/www/html \
     && sudo chmod -R 755 /var/www/html/storage \
     && sudo chmod -R 755 /var/www/html/bootstrap/cache
 
