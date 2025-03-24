@@ -26,7 +26,7 @@ class IngredientController extends Controller
             'price' => 'required|integer|min:1',
         ]);
 
-        return Potion::create($request->all());
+        return Ingredient::create($request->all());
     }
 
     /**
